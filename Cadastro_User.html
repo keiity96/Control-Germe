@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+        <title> CADASTRO |</title>
+</head>
+<body id="Back-Logar">
+    <header>
+        <div class="Menu-Group">
+            <nav class="Menu"> 
+                <img src="Icons/GotaFall.gif" id="logo">
+            <ul>
+                    <li>
+                        <a href="Index.html" class="Home">
+                            <div class="icon">
+                                <img src="Icons/Home.png"alt="some text" width=40 height=40>
+
+                            </div>
+                            <div class="nome" data-text="Home">Home</div>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="Login.html" class="Login">
+                                <div class="icon">
+                                    <img src="Icons/Login.png"alt="some text" width=40 height=40>
+                                </div>
+                                <div class="nome" data-text="Login">Login</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Blog.html" class="Blog">
+                                    <div class="icon">
+                                        <img src="Icons/Group.png"alt="some text" width=40 height=40>
+                                    </div>
+                                    <div class="nome" data-text="Blog">Blog</div>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="Contato.html" class="Contato">
+                                        <div class="icon">
+                                            <img src="Icons/Phone.png"alt="some text" width=40 height=40>
+                                        </div>
+                                        <div class="nome" data-text="Contato">Contato</div>
+                                    </a>
+                                </li>
+
+            </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+             
+        <div class="form-box">
+            <h2>Faça seu Cadastro</h2>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="CadastroA()">Aluno</button>
+
+            </div>
+            
+                <form id="CadastroA"class="input-group">
+                    <input type="text" class="input-field" placeholder="Nome" required>
+                        <input type="datetime=" class="input-field" placeholder="RM" required>
+                    <select name="Curso" class="input-field" required><br>
+                        <option>Curso</option>
+                                 <option value="Analise clinicas">Analise clinicas</option>
+                                 <option value="Enfermagem">Enfermagem</option>
+                                 <option value="Farmacia">Farmacia</option>
+                                 <option value="Informatica">Informatica</option>
+                                 <option value="Quimica">Quimica</option>
+                    </select><br>
+                                 <label>Data de Nascimento</label>
+                    <input type="date" name="" class="input-field"><br>
+                            <input type="tel" class="input-field" placeholder="Telefone" required>
+                    <input type="email" name="" class="input-field" placeholder="Email" required>
+                            <input type="text" class="input-field" placeholder="Senha"  required>
+                    <input type="text" class="input-field" placeholder="Confirmar Senha" required>
+                    <br>    
+                    <br>
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+                </form>
+ 
+                    
+        </div>
+        
+    </div>
+</body>
+</html>

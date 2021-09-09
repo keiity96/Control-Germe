@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Js/jquery.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+        <title> CADASTRO |</title>
+</head>
+<body id="Back-Logar">
+    <header>
+        <div class="Menu-Group">
+            <nav class="Menu"> 
+                <img src="Icons/GotaFall.gif" id="logo">
+            <ul>
+                    <li>
+                        <a href="Index.html" class="Home">
+                            <div class="icon">
+                                <img src="Icons/Home.png"alt="some text" width=40 height=40>
+
+                            </div>
+                            <div class="nome" data-text="Home">Home</div>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="Login.html" class="Login">
+                                <div class="icon">
+                                    <img src="Icons/Login.png"alt="some text" width=40 height=40>
+                                </div>
+                                <div class="nome" data-text="Login">Login</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Blog.html" class="Blog">
+                                    <div class="icon">
+                                        <img src="Icons/Group.png"alt="some text" width=40 height=40>
+                                    </div>
+                                    <div class="nome" data-text="Blog">Blog</div>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="Contato.html" class="Contato">
+                                        <div class="icon">
+                                            <img src="Icons/Phone.png"alt="some text" width=40 height=40>
+                                        </div>
+                                        <div class="nome" data-text="Contato">Contato</div>
+                                    </a>
+                                </li>
+
+            </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+             
+        <div class="form-box">
+            <h2>Faça seu Cadastro</h2>
+            <div class="button-box2">
+                <div id="btn3"></div>
+                <button type="button" class="toggle-btn3" onclick="CadastroC()">Voluntario</button>
+
+            </div>
+             
+                <form id="CadastroC"class="input-group2">
+                    <input type="text" class="input-field2" placeholder="Nome" required>
+                        <input type="datetime=" class="input-field2" placeholder="CPF" required>
+                    <label>Data de Nascimento</label>
+                        <input type="date" name="" class="input-field2"><br>
+                    <label for="sexo">
+                        <label>Genero</label><br>
+                            <input type="radio" class="sexo" name="sexo" value="Homem" required /> Masculino&nbsp;&nbsp;
+                        <input type="radio" class="sexo" name="sexo" value="Mulher" required /> Feminino
+                        <div id="gv"></div>
+                    </label>
+                    <div id="caixa"></div>
+                        <input type="tel" class="input-field2" placeholder="Telefone" required>
+                    <input type="email" name="" class="input-field2" placeholder="Email" required>
+                            <input type="text" class="input-field2" placeholder="Senha"  required>
+                    <input type="text" class="input-field2" placeholder="Confirmar Senha" required><br>
+                    <br> 
+                    <button type="submit" class="submit-btn2">Cadastrar</button>
+                </form>
+        </div>
+        <br>  
+    </div>
+    <script type="text/javascript">
+    var valorSexo = "";
+    var a=document.getElementById('gv');
+        $(document).ready(function(){
+		    $("input[name=sexo]").on("click", function() {
+                valorSexo = $('input[name=sexo]:checked').val();
+                if(valorSexo == 'Mulher') {   
+                    a.innerText='Gravida';        
+                    $("#caixa").html('<input type=radio id=gravida name="gravida" value="sim" required /> Sim<br><input type=radio id=gravida name="gravida" value="nao" required /> Não').show();	
+                 } else {
+                    a.innerText=''; 
+                    $("#caixa").html('<input type=radio id=gravida name="gravida" value="sim" required /> Sim<br><input type=radio id=gravida name="gravida" value="nao" required /> Não').hide();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
